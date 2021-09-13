@@ -204,7 +204,7 @@ TASK [Create directrory for Elasticsearch] *************************************
 +++ after
 @@ -1,4 +1,4 @@
  {
-     "path": "/opt/elastic/7.14.1",
+     "path": "/opt/elastic/7.10.1",
 -    "state": "absent"
 +    "state": "directory"
  }
@@ -221,7 +221,7 @@ TASK [Set environment Elastic] *************************************************
 +# Warning: This file is Ansible Managed, manual changes will be overwritten on next playbook run.
 +#!/usr/bin/env bash
 +
-+export ES_HOME=/opt/elastic/7.14.1
++export ES_HOME=/opt/elastic/7.10.1
 +export PATH=$PATH:$ES_HOME/bin
 \ No newline at end of file
 
@@ -235,12 +235,12 @@ ok: [kibana01]
 TASK [Upload tar.gz Kibana from remote URL] ****************************************************************************************************
 changed: [kibana01]
 
-TASK [Create directrory for Kibana (/opt/kibana/7.14.1)] ***************************************************************************************
+TASK [Create directrory for Kibana (/opt/kibana/7.10.1)] ***************************************************************************************
 --- before
 +++ after
 @@ -1,4 +1,4 @@
  {
-     "path": "/opt/kibana/7.14.1",
+     "path": "/opt/kibana/7.10.1",
 -    "state": "absent"
 +    "state": "directory"
  }
@@ -257,7 +257,7 @@ TASK [Set environment Kibana] **************************************************
 +# Warning: This file is Ansible Managed, manual changes will be overwritten on next playbook run.
 +#!/usr/bin/env bash
 +
-+export KIBANA_HOME=/opt/kibana/7.14.1
++export KIBANA_HOME=/opt/kibana/7.10.1
 +export PATH=$PATH:$KIBANA_HOME/bin
 \ No newline at end of file
 
@@ -326,7 +326,7 @@ ok: [kibana01]
 TASK [Upload tar.gz Kibana from remote URL] ****************************************************************************************************
 ok: [kibana01]
 
-TASK [Create directrory for Kibana (/opt/kibana/7.14.1)] ***************************************************************************************
+TASK [Create directrory for Kibana (/opt/kibana/7.10.1)] ***************************************************************************************
 ok: [kibana01]
 
 TASK [Extract Kibana in the installation directory] ********************************************************************************************
